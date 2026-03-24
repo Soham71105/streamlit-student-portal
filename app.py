@@ -8,6 +8,7 @@ DATA_FILE = "data/students.csv"
 
 # --- Helper Function: Save Data ---
 def save_student_data(name, grade, major, gpa, activities):
+    os.makedirs("data", exist_ok=True) # <--- ADD THIS LINE HERE
     # Prepare the new data as a dictionary
     new_data = {
         "Name": [name],
